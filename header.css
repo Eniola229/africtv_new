@@ -1,0 +1,261 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+header{
+	background-color: #0e1113;
+}
+header .top_header{
+	background: #153400;
+	height: 2vh;
+	width: 100%;
+}
+header .header_com{
+	display: flex;
+	width: 90%;
+	align-items: center;
+	margin: auto;
+	justify-content: space-between;
+    box-sizing: border-box;
+    position: relative;
+    line-height: inherit;
+    height: 9vh;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #fff;
+	
+}
+header .header_com .logo{
+	background: rgb(255, 255, 255);
+	height: 80px;
+	width: 100px;
+	text-align: center;
+	margin-top: 3%;
+	background-image: url("logo.png");
+	background-size: cover;
+	border: 1px solid white;
+}
+header .header_com .logo_home{
+	margin-top: 3%;
+}
+header .header_com ul{
+	display: flex;
+	color: white;
+	gap: 5px;
+	float: left;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center; 
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+ul a {
+	text-decoration: none;
+	font-size: 0.9rem;
+	color: white;
+	font-family: monospace;
+	font-weight: 900;
+}
+header .other_header{
+	display: flex;
+	justify-content: space-around;
+	gap: 10px;
+}
+header .other_header select{
+	background-color: transparent;
+	color: white;
+	border: none;
+}
+header .other_header select option{
+	background-color: green;
+	color: white;
+}
+header .other_header .search{
+	color: white;
+	width:2em;
+	height: 2em;
+	cursor: pointer;
+	transition: 1s;
+}
+header .other_header .search:hover{
+	color: green;
+}
+header .other_header .menu{
+	color: white;
+	width:2em;
+	height: 2em;
+	cursor: pointer;
+	transition: 1s;
+}
+header .other_header .menu:hover{
+	color: green;
+}
+header .down_header {
+    height: 7vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(5, 31, 0);
+}
+
+header .down_header .loc {
+    display: flex;
+	margin-left: 15%;
+}
+
+header .loc .contact {
+	display: flex;
+    color: rgb(252, 252, 252);
+    font-family: monospace;
+    font-weight: 400;
+	justify-content: space-around;
+}
+header .down_header .social__icon {
+    order: 1; 
+	display: flex;
+	justify-content: space-around;
+	margin-right: 20px;
+	gap: 10px;
+	color: white;
+}
+.whatsapp{
+	width:1.5em; 
+	height:1.5em;
+	cursor: pointer;
+}
+.whatsapp:hover{
+	color: red;
+}
+.x{
+	width:1.5em; 
+	height:1.5em;
+	cursor: pointer;
+}
+.x:hover{
+	color: red;
+}
+.youtube{
+	width:1.5em; 
+	height:1.5em;
+	cursor: pointer;
+}
+.youtube:hover{
+	color: red;
+}
+.session_btn{
+	display: flex;
+	gap: 10px;
+	justify-content: space-around;
+}
+.session_btn button{
+	border: none;
+	background-color: rgb(207, 1, 1);
+	color: white;
+	cursor: pointer;
+}
+.session_btn .btn__one{
+	width: 80px;
+	height: 6vh;
+	border-radius: 5px;
+	font-weight: bolder;
+}
+.session_btn .btn__two{
+	width: 100px;
+	height: 6vh;
+	border-radius: 5px;
+	font-weight: bolder;
+}
+
+   /* For side menu */
+   .side-menu {
+	position: fixed;
+	top: 0;
+	left: -250px;
+	width: 250px;
+	height: 100%;
+	background-color: #333;
+	transition: left 0.3s ease;
+	z-index: 1000;
+}
+.side-menu ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 50px 0 0 0;
+}
+.side-menu ul li {
+	padding: 10px 20px;
+	color: #fff;
+	font-size: 18px;
+	border-bottom: 1px solid #555;
+}
+.side-menu ul li a {
+	color: #fff;
+	text-decoration: none;
+}
+.menu-icon {
+	position: fixed;
+	top: 20px;
+	left: 20px;
+	cursor: pointer;
+	z-index: 1100; 
+}
+header .side-menu .logo{
+	background: rgb(255, 255, 255);
+	height: 80px;
+	width: 100px;
+	text-align: center;
+	margin-top: 2%;
+	background-image: url("logo.png");
+	background-size: cover;
+	border: 1px solid white;
+	margin: 10px;
+}
+
+@media only screen and (max-width: 1000px) {
+	/* Styles for tablets and smaller devices */
+	header .header_com ul {
+        display: none;
+    }
+	.side-menu {
+	  width: 200px;
+	}
+  }
+  
+
+@media only screen and (max-width: 768px) {
+	header .header_com ul {
+        display: none;
+    }
+	.side-menu {
+	  width: 200px;
+	}
+	header .loc .contact {
+		display: none;
+	}
+	
+  }
+  
+  @media only screen and (max-width: 480px) {
+	header .header_com .logo{
+		margin-top: 5%;
+	}
+	header .header_com .logo_home{
+		margin-top: 15%;
+	}
+	header .header_com ul {
+        display: none;
+    }
+	header .down_header .session_btn{
+		display: none;
+	}
+	.side-menu {
+	  width: 70%; 
+	  left: -300px;
+	}
+  }
+  
